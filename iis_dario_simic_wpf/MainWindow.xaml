@@ -1,0 +1,16 @@
+﻿<Window x:Class="iis_dario_simic_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iis_dario_simic_wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Status:" HorizontalAlignment="Left" Margin="354,242,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lblStatus" Foreground="Orange" Content="Unknown" HorizontalAlignment="Left" Margin="400,242,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.382,2.551"/>
+
+        <Button Content="Choose XML File" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Top" Height="24" Width="121" Click="OnClickBtnXML"/>
+
+    </Grid>
+</Window>
