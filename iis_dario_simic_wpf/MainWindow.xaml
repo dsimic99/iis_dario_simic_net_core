@@ -7,10 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Status:" HorizontalAlignment="Left" Margin="354,242,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="lblStatus" Foreground="Orange" Content="Unknown" HorizontalAlignment="Left" Margin="400,242,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.382,2.551"/>
+        <Label Content="Status:" HorizontalAlignment="Left" Margin="354,348,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lblStatus" Foreground="Orange" Content="Unknown" HorizontalAlignment="Left" Margin="400,348,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.382,2.551"/>
 
-        <Button Content="Choose XML File" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Top" Height="24" Width="121" Click="OnClickBtnXML"/>
+        <Button Content="Validate and Insert" HorizontalAlignment="Center" Margin="0,319,0,0" VerticalAlignment="Top" Height="24" Width="120" Click="OnClickBtnXML"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Center" Margin="0,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="25"/>
+        <TextBox x:Name="txtNumberOfPages" HorizontalAlignment="Center" Margin="0,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="25"/>
+        <Label Content="Name of Dentist&#xD;&#xA;" HorizontalAlignment="Left" Margin="210,146,0,0" VerticalAlignment="Top"/>
+        <Label Content="Name of Patient&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="210,175,0,0" VerticalAlignment="Top"/>
+        <Label Content="Date&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="267,204,0,0" VerticalAlignment="Top"/>
+        <DatePicker HorizontalAlignment="Center" Margin="0,209,0,0" VerticalAlignment="Top" Width="168"/>
 
     </Grid>
 </Window>

@@ -19,12 +19,17 @@ namespace dario_simic_iis_web_api
 
     public class Startup
     {
-        internal static List<Book> BookList;
+        public static List<DentistAppointment> Appointments;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
 
-            BookList = new List<Book>();
+            Appointments = new List<DentistAppointment>();
+            Appointments.Add(new DentistAppointment());
+            Appointments.Add(new DentistAppointment());
+            Appointments.Add(new DentistAppointment());
+            Appointments.Add(new DentistAppointment());
+            Appointments.Add(new DentistAppointment());
         }
 
         public IConfiguration Configuration { get; }

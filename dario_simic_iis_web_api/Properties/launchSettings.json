@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "books",
+      "launchUrl": "appointment",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
