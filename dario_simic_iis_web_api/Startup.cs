@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,17 +26,25 @@ namespace dario_simic_iis_web_api
             Configuration = configuration;
 
             Appointments = new List<DentistAppointment>();
-            Appointments.Add(new DentistAppointment());
-            Appointments.Add(new DentistAppointment());
-            Appointments.Add(new DentistAppointment());
-            Appointments.Add(new DentistAppointment());
-            Appointments.Add(new DentistAppointment());
+            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
+            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
+            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
+            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
+            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
+            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
+            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
+            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
         }
 
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
+            
 
+            services.Configure<IISServerOptions>(options =>
+            {
+                options.AllowSynchronousIO = true;
+            });
             services.AddControllers().AddXmlDataContractSerializerFormatters();
         }
 

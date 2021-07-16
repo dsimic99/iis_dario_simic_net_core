@@ -45,9 +45,11 @@ namespace iis_dario_simic_wpf
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
                 //tu si stao, znaci saljes xml kao plain text putem JSONA, odradili smo kralju bitan dio, sutra pitaj jeli ima bolji nacin ali ovako je sigurno prolazno
-                string json = "\"sdadasdasd\"";
+                string f = StringFromRichTextBox(txtXML);
 
-                streamWriter.Write(json);
+                string xml ="";
+
+                streamWriter.Write(xml);
             }
 
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
@@ -61,6 +63,14 @@ namespace iis_dario_simic_wpf
 
 
         }
+
+        string StringFromRichTextBox(RichTextBox rtb)
+        {
+            return new TextRange(rtb.Document.ContentStart,
+            rtb.Document.ContentEnd).Text;
+        }
+
+
     }
     
 }
