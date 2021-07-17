@@ -6,12 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using SoapCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Threading.Tasks;
 
 namespace dario_simic_iis_web_api
@@ -39,7 +42,8 @@ namespace dario_simic_iis_web_api
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            services.TryAddSingleton<IAppointmentService, AppointmentService>();
+            services.AddMvc();
 
             services.Configure<IISServerOptions>(options =>
             {
@@ -52,6 +56,7 @@ namespace dario_simic_iis_web_api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSoapEndpoint<IAppointmentService>("/AppointmentService.asmx", new BasicHttpBinding(), SoapSerializer.XmlSerializer);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
