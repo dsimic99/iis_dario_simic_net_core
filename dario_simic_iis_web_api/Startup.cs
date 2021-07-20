@@ -1,4 +1,5 @@
 using dario_simic_iis_web_api.Model;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,12 +10,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using SoapCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace dario_simic_iis_web_api
@@ -29,19 +32,34 @@ namespace dario_simic_iis_web_api
             Configuration = configuration;
 
             Appointments = new List<DentistAppointment>();
-            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
-            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
-            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
-            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
-            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
-            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
-            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
-            Appointments.Add(new DentistAppointment(new Dentist("TOG"), new Patient("TEST")));
+            Appointments.Add(new DentistAppointment(new Dentist("Dr. Darko Mendes"), new Patient("Luka Simic")));
+            Appointments.Add(new DentistAppointment(new Dentist("Dr. Ivan Tog"), new Patient("Dario Simic")));
+            Appointments.Add(new DentistAppointment(new Dentist("Celo Mepas"), new Patient("Ivan Truljo")));
+            Appointments.Add(new DentistAppointment(new Dentist("Zarog Bevanda"), new Patient("Antisa Burko")));
+            Appointments.Add(new DentistAppointment(new Dentist("Dr. Stjepan Ivic"), new Patient("Luka Modric")));
+            Appointments.Add(new DentistAppointment(new Dentist("Mario Mense"), new Patient("Florip Popic")));
+            Appointments.Add(new DentistAppointment(new Dentist("Mr. Florian"), new Patient("Kosonja Pravi")));
+            Appointments.Add(new DentistAppointment(new Dentist("Cevap Kevap"), new Patient("Stjepan Ibicevic")));
         }
 
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = Configuration["Jwt:Issuer"],
+            ValidAudience = Configuration["Jwt:Issuer"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
+        };
+    });
+
             services.TryAddSingleton<IAppointmentService, AppointmentService>();
             services.AddMvc();
 

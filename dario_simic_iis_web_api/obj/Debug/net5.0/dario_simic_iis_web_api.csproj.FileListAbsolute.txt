@@ -278,5 +278,5 @@ C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\dario_simic_iis_web_api\
 C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\dario_simic_iis_web_api\obj\Debug\net5.0\ref\dario_simic_iis_web_api.dll
 C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\dario_simic_iis_web_api\obj\Debug\net5.0\dario_simic_iis_web_api.pdb
 C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\dario_simic_iis_web_api\obj\Debug\net5.0\dario_simic_iis_web_api.genruntimeconfig.cache
-C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\dario_simic_iis_web_api\obj\Debug\net5.0\dario_simic_iis_web_api.csprojAssemblyReference.cache
 C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\dario_simic_iis_web_api\bin\Debug\net5.0\XmlRpc.dll
+C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\dario_simic_iis_web_api\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
