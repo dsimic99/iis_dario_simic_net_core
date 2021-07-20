@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cTZalo8eNhjHScacxp+KtBzxjWpzkFLlxgGkXfWAxPLlMtxP6s2y3b3pZf3x7JRg1t5RFIg2doYyqhre/NNpZg==",
+  "dgSpecHash": "XxdbiRUkSYDAH/b7QVMksvKxcYfDuJ/jzEMsMFDKHu1bfQBFrPJR8CqHAOtLzmKBP+Y87vnr59wXpDlfdXgVsQ==",
   "success": true,
   "projectFilePath": "C:\\Projects Algebra\\Algebra_IIS\\iis_dario_simic_web_api\\dario_simic_iis_web_api\\dario_simic_iis_web_api.csproj",
   "expectedPackageFiles": [
@@ -180,7 +180,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\dario\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\dario\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\dario\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\dario\\.nuget\\packages\\xmlrpc\\2.1.1\\xmlrpc.2.1.1.nupkg.sha512"
   ],
   "logs": [
     {
@@ -189,6 +190,16 @@
       "warningLevel": 1,
       "message": "Package 'RelaxNG 3.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
       "libraryId": "RelaxNG",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'XmlRpc 2.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "XmlRpc",
       "targetGraphs": [
         "net5.0"
       ]

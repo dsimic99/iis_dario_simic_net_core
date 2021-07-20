@@ -41,6 +41,7 @@
           "RelaxNG": "3.2.3",
           "SoapCore": "1.1.0.10",
           "Swashbuckle.AspNetCore": "5.6.3",
+          "XmlRpc": "2.1.1",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -2351,6 +2352,17 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "XmlRpc/2.1.1": {
+        "runtime": {
+          "lib/net45/XmlRpc.dll": {
+            "assemblyVersion": "2.1.5352.29245",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net45/XmlRpc.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -5285,6 +5297,13 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "XmlRpc/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YBlX7EdrNqq2Unuz7qZfewQUV14D6XdyUQNZF5RQRzvtcYXcmlz2dvqf63Si347qCSEoXDaN06FB0lYzEc/71g==",
+      "path": "xmlrpc/2.1.1",
+      "hashPath": "xmlrpc.2.1.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

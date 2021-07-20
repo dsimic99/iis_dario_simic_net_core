@@ -16,6 +16,7 @@
     <PackageReference Include="RelaxNG" Version="3.2.3" />
     <PackageReference Include="SoapCore" Version="1.1.0.10" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="XmlRpc" Version="2.1.1" />
   </ItemGroup>
 
 </Project>

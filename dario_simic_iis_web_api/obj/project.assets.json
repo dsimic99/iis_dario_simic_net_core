@@ -2863,6 +2863,15 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "XmlRpc/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/XmlRpc.dll": {}
+        },
+        "runtime": {
+          "lib/net45/XmlRpc.dll": {}
+        }
       }
     }
   },
@@ -9457,6 +9466,19 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "XmlRpc/2.1.1": {
+      "sha512": "YBlX7EdrNqq2Unuz7qZfewQUV14D6XdyUQNZF5RQRzvtcYXcmlz2dvqf63Si347qCSEoXDaN06FB0lYzEc/71g==",
+      "type": "package",
+      "path": "xmlrpc/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/XmlRpc.dll",
+        "lib/net45/XmlRpc.xml",
+        "xmlrpc.2.1.1.nupkg.sha512",
+        "xmlrpc.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -9468,7 +9490,8 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
       "RelaxNG >= 3.2.3",
       "SoapCore >= 1.1.0.10",
-      "Swashbuckle.AspNetCore >= 5.6.3"
+      "Swashbuckle.AspNetCore >= 5.6.3",
+      "XmlRpc >= 2.1.1"
     ]
   },
   "packageFolders": {
@@ -9550,6 +9573,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[5.6.3, )"
+          },
+          "XmlRpc": {
+            "target": "Package",
+            "version": "[2.1.1, )"
           }
         },
         "imports": [
@@ -9581,6 +9608,16 @@
       "warningLevel": 1,
       "message": "Package 'RelaxNG 3.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
       "libraryId": "RelaxNG",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'XmlRpc 2.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "XmlRpc",
       "targetGraphs": [
         "net5.0"
       ]
