@@ -32,7 +32,7 @@ namespace dario_simic_iis_web_api
             Configuration = configuration;
 
             Appointments = new List<DentistAppointment>();
-            Appointments.Add(new DentistAppointment(new Dentist("Dr. Darko Mendes"), new Patient("Luka Simic")));
+            Appointments.Add(new DentistAppointment(new Dentist("Dr. Darko Mendes"), new Patient("Luka Simic"),new DateTime(2001,01,01,5,55,55)));
             Appointments.Add(new DentistAppointment(new Dentist("Dr. Ivan Tog"), new Patient("Dario Simic")));
             Appointments.Add(new DentistAppointment(new Dentist("Celo Mepas"), new Patient("Ivan Truljo")));
             Appointments.Add(new DentistAppointment(new Dentist("Zarog Bevanda"), new Patient("Antisa Burko")));

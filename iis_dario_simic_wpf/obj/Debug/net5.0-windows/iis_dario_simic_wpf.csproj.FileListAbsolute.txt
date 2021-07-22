@@ -42,3 +42,5 @@ C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\iis_dario_simic_wpf\obj\
 C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\iis_dario_simic_wpf\obj\Debug\net5.0-windows\ref\iis_dario_simic_wpf.dll
 C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\iis_dario_simic_wpf\obj\Debug\net5.0-windows\iis_dario_simic_wpf.pdb
 C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\iis_dario_simic_wpf\obj\Debug\net5.0-windows\iis_dario_simic_wpf.genruntimeconfig.cache
+C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\iis_dario_simic_wpf\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Projects Algebra\Algebra_IIS\iis_dario_simic_web_api\iis_dario_simic_wpf\obj\Debug\net5.0-windows\iis_dario_simic_wpf.csproj.CopyComplete
